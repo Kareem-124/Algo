@@ -27,10 +27,13 @@ console.log(pushFront([1,2,3,4],8));
 // popFront([4,5,7,9]) => 4 returned, with [5,7,9] printed in the function
 
 function popFront(array){
+    // save the first value
     first_value = array[0];
+    // shift the elements to the left one step
     for(let i =0; i < array.length-1; i++){
         array[i] = array[i+1];
     }
+    // delete the last element 
     array.pop();
     return {
         'value' : first_value,
