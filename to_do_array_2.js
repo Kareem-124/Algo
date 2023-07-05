@@ -2,11 +2,14 @@
 
 function reverse_array(array) {
     let temp = 0;
+    // iterate through the array using two pointers:
+    // i : iterate from the begging to center of the array
+    // j : iterate from the end to the center
+    // then switch the values of the elements utilizing the temp variable
     for (let i = 0, j = array.length - 1; i < array.length / 2; i++, j--) {
         temp = array[i];
         array[i] = array[j];
         array[j] = temp;
-        // console.log(`The value of i = ${i} and the value of j = ${j}`);
     }
     return array;
 
@@ -66,3 +69,46 @@ console.log("Rotate Question:")
 console.log(rotateArr(array, -1));
 
 //-----------------------------------------------------------------------------------------
+
+function push_back(array,index){
+    //shift the elements to the left one step starting from the given index.
+    for(let i = index; i < array.length; i++){
+        array[i] = array[i+1];
+    }
+    // remove the last element.
+    array.pop()
+}
+
+function filter_range(array,min,max){
+    //iterate through the array
+    for (let i = 0 ; i < array.length ; i++){
+        // if the value of the element is outside of the range
+        if (array[i]<min || array[i] > max){
+            // shift the element to the end of the array then pop it.
+            push_back(array,i);
+            // create recursive function  after the push to re-iterate on the new array 
+            filter_range(array,min,max);
+        } 
+    }
+    return array
+}
+array = [0,1,2,3,4,5,6,7,8,9,10]
+console.log(filter_range(array,5,7));
+
+// Other Solution
+
+//-----------------------------------------------------------------------------------------
+function arr_concat(first_array, second_array){
+    new_array=[];
+    for (let i = 0; i < first_array.length; i++){
+        new_array.push(first_array[i]);
+    }
+    for (let i = 0; i < second_array.length; i++){
+        new_array.push(second_array[i]);
+    }
+    return new_array;
+}
+
+array1 = ['a','b'];
+array2 = [1,2];
+console.log(arr_concat(array1,array2));
