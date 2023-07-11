@@ -74,7 +74,9 @@ console.log(countNonSpaces("Hello world !"));
 function removeShorterStrings(array, min_val){
     let counter = 0;
     let new_array = [];
+    // iterate through array
     for (let i = 0; i <array.length; i++){
+        // check the length of the string in the first element if its equal or bigger save it in new_array
         if(array[i].length >= min_val){
             new_array[counter] = array[i];
             counter++;
