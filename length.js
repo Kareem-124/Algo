@@ -59,8 +59,12 @@ new_list.AddFront(5);
 new_list.AddFront(6);
 new_list.AddFront(7);
 new_list.AddFront(8);
-// new_list.PrintSSL();
-new_list.contains(7);
+new_list.AddFront(8);
+new_list.AddFront(8);
+new_list.AddFront(8);
+new_list.AddFront(8);
+
+new_list.length();
 
 
 
