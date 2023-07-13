@@ -5,4 +5,4 @@ function rSigma(value){
     return (value + rSigma(value-1));
 }
 
-console.log(rSigma(4.9
+console.log(rSigma(4.9))
