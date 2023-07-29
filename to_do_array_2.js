@@ -14,7 +14,7 @@ function reverse_array(array) {
     return array;
 
 }
-array = reverse_array([1, 2, 3, 4, 5, 6])
+array = reverse_array([1, 2, 3, 4, 5,])
 console.log(`Reverse Question : ${array}`);
 
 //-----------------------------------------------------------------------------------------
@@ -66,7 +66,7 @@ function rotateArr(arr, shiftBy) {
 }
 array = [1, 2, 3, 4, 5];
 console.log("Rotate Question:")
-console.log(rotateArr(array, -1));
+console.log(rotateArr(array, 3));
 
 //-----------------------------------------------------------------------------------------
 

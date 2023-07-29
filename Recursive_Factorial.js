@@ -63,4 +63,4 @@ function rGCF(number1, number2, counter1 = 2, counter2 = 2, o1 = number1, o2 = n
 
 }
 
-console.log(`The Greatest Common Factor = ${rGCF(123456, 987654)}`);
+console.log(`The Greatest Common Factor = ${rGCF(20, 8)}`);

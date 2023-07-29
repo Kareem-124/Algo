@@ -5,12 +5,12 @@ function rBinarySearch(ary, target, min = 0, max = ary.length-1) {
     console.log(`min = ${min} / max = ${max} / address = ${address} / pointer = ${pointer} >> Target = ${target}`);
     if ( pointer == target) return true;
 
-    if(target > pointer && !(min > max)){
+    if(target > pointer && (min < max)){
         min = address + 1;
         max = max;
         return rBinarySearch(ary,target, min,max);
     }
-    else if (target < pointer && !(min > max)){
+    else if (target < pointer && (min < max)){
         min = min;
         max = address-1;
         return rBinarySearch(ary,target,min,max);
@@ -25,4 +25,4 @@ function rBinarySearch(ary, target, min = 0, max = ary.length-1) {
     
 }
 array = [0, 1, 2, 3, 4, 5, 6, 7];
-console.log(rBinarySearch(array, 54654));
+console.log(rBinarySearch(array, -8));
